@@ -1,13 +1,16 @@
 {
-  "name": "npm-caret-checker",
+  "name": "@u-yas/npm-caret-checker",
   "version": "0.0.1",
   "description": "Check if ^ in the package version written in dependencies devDependencies peerDependencies optionalDependencies bundledDependencies",
   "main": "./lib/index.js",
   "files": [
     "lib/**/*"
   ],
+  "bin": {
+    "npm-caret-checker": "./dist/npm-caret-checker"
+  },
   "scripts": {
-    "build": "tsc",
+    "build": "ncc build ./src/index.ts",
     "clean": "rm -rf ./lib/",
     "cm": "cz",
     "ncc": "ncc",
@@ -21,11 +24,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/u-yas/npm-caret-checker.git"
+    "url": "git://github.com/u-yas/npm-caret-checker.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "license": "MIT",
   "author": {
-    "name": "U-ya",
+    "name": "u-yas",
     "email": "uyas-for-job@protonmail.com",
     "url": "https://github.com/u-yas"
   },
@@ -46,6 +52,7 @@
     "console.table": "0.10.0"
   },
   "devDependencies": {
+    "@u-yas/npm-caret-checker": "0.0.1",
     "@types/jest": "26.0.24",
     "@types/node": "12.20.11",
     "@typescript-eslint/eslint-plugin": "4.22.0",
