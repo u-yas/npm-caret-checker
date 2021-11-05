@@ -11,6 +11,5 @@ $ npm install -g npm-caret-checker
 
 Package.json must exist in the current directory
 ```sh
-<!-- current directory exists package.json -->
 $ npm-caret-checker
 ```
