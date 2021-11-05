@@ -1,7 +1,6 @@
 ## npm-caret-checker
 
-This package checks for "^" in the version of the battle in the dependencies list, which has several types in the package.json file in the current directory.
-
+This package will check the "^" mark at the beginning of the version in some kind of dependencies in package.json and will give an error if it is present
 
 example
 ```sh
