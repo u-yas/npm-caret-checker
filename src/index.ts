@@ -2,7 +2,7 @@
 
 import { red, cyan, cyanBright } from 'colorette';
 import 'console.table';
-
+import { resolve } from 'path';
 export const main = (): void => {
   const path =
     process.argv.find(arg => /^--path/.exec(arg)) !== undefined
@@ -13,7 +13,7 @@ export const main = (): void => {
     [K in string]: {
       [K2 in string]: string;
     };
-  } = require(path as string);
+  } = require(resolve(__dirname, path as string));
 
   const devDependencies =
     packageJson?.['devDependencies'] !== undefined

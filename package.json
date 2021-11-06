@@ -1,6 +1,6 @@
 {
   "name": "caret-check",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Check if ^ in the package version written in dependencies devDependencies peerDependencies optionalDependencies bundledDependencies",
   "main": "./dist/index.js",
   "files": [
