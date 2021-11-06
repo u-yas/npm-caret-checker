@@ -1,13 +1,13 @@
 {
   "name": "caret-checker",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Check if ^ in the package version written in dependencies devDependencies peerDependencies optionalDependencies bundledDependencies",
   "main": "./dist/index.js",
   "files": [
     "dist/**/*"
   ],
   "bin": {
-    "npm-caret-checker": "./dist/npm-caret-checker"
+    "npm-caret-checker": "./dist/index.js"
   },
   "scripts": {
     "build": "ncc build ./src/index.ts",
