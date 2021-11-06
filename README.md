@@ -17,3 +17,6 @@ $ caret-check
 use **--path=<path to package.json></path>**
 ```sh
 $ caret-check --path=~/path/to/package.json
+# example
+$ caret-check --path=${PWD}/../hoge/package.json
+```
