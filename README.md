@@ -5,15 +5,15 @@ This package will check the "^" mark at the beginning of the version in some kin
 install
 
 ```sh
-$ npm install -g caret-checker
+$ npm install -g caret-check
 ```
 
 
 if current directory exists package.json
 ```sh
-$ caret-checker
+$ caret-check
 ```
 
 use **--path=<path to package.json></path>**
 ```sh
-$ caret-checker --path=~/path/to/package.json
+$ caret-check --path=~/path/to/package.json
