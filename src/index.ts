@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { red, cyan, cyanBright } from 'colorette';
 import 'console.table';
 
@@ -12,8 +14,6 @@ export const main = (): void => {
       [K2 in string]: string;
     };
   } = require(path as string);
-
-  console.log(packageJson);
 
   const devDependencies =
     packageJson?.['devDependencies'] !== undefined
