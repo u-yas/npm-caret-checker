@@ -1,5 +1,5 @@
 {
-  "name": "npm-caret-checker",
+  "name": "caret-checker",
   "version": "0.0.1",
   "description": "Check if ^ in the package version written in dependencies devDependencies peerDependencies optionalDependencies bundledDependencies",
   "main": "./dist/index.js",
