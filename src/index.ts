@@ -1,13 +1,19 @@
-import { red, cyan } from 'colorette';
+import { red, cyan, cyanBright } from 'colorette';
 import 'console.table';
-const currentDir = process.cwd();
 
 export const main = (): void => {
+  const path =
+    process.argv.find(arg => /^--path/.exec(arg)) !== undefined
+      ? process.argv?.find(arg => arg.includes('--path='))?.split('=')[1]
+      : `${process.cwd()}/package.json`;
+
   const packageJson: {
     [K in string]: {
       [K2 in string]: string;
     };
-  } = require(`${currentDir}/package.json`);
+  } = require(path as string);
+
+  console.log(packageJson);
 
   const devDependencies =
     packageJson?.['devDependencies'] !== undefined
@@ -154,7 +160,25 @@ export const main = (): void => {
       );
     }
 
-    throw new Error(red('Please remove caret Bye!!'));
+    throw new Error(
+      red(
+        `Please remove ${
+          dependenciesList.length > 0 ? cyanBright('dependencies') : ''
+        } ${
+          devDependenciesList.length > 0 ? cyanBright('devDependencies') : ''
+        }  ${
+          peerDependenciesList.length > 0 ? cyanBright('peerDependencies') : ''
+        }${
+          optionalDependenciesList.length > 0
+            ? cyanBright('optionalDependencies')
+            : ''
+        }${
+          bundledDependenciesList.length > 0
+            ? cyanBright('bundledDependencies')
+            : ''
+        } caret`
+      )
+    );
   }
 };
 

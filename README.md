@@ -9,7 +9,11 @@ $ npm install -g npm-caret-checker
 ```
 
 
-Package.json must exist in the current directory
+if current directory exists package.json
 ```sh
 $ npm-caret-checker
 ```
+
+use **--path=<path to package.json></path>**
+```sh
+$ npm-caret-checker --path=~/path/to/package.json
